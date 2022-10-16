@@ -28,7 +28,9 @@ const Home = ({ home, success }: Props) => {
 
   return (
     <Container>
-      <H1>Floor Report</H1>
+      <H1>
+        <strong>Floor Report</strong>
+      </H1>
       <Text>NFT floor prices & analytics</Text>
       {/*}
     //   <Stats stats={stats} />
