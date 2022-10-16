@@ -5,11 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      tablet: "640px",
-      laptop: "1024px",
-      desktop: "1280px",
-    },
+    // screens: {
+    //   tablet: "640px",
+    //   laptop: "1024px",
+    //   desktop: "1280px",
+    // },
     container: {
       center: true,
       padding: "2rem",

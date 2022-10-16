@@ -28,10 +28,14 @@ const Home = ({ home, success }: Props) => {
 
   return (
     <Container>
-      <H1>
-        <strong>Floor Report</strong>
-      </H1>
-      <Text>NFT floor prices & analytics</Text>
+      <div className="flex flex-col justify-center items-center mb-24">
+        <H1>
+          <strong>Floor Report</strong>
+        </H1>
+        <Text>
+          <em>NFT floor prices & analytics</em>
+        </Text>
+      </div>
       {/*}
     //   <Stats stats={stats} />
     //   <RandomNFT nft={randomNFT} /> */}
