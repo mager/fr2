@@ -3,6 +3,6 @@ import {useAccount} from 'wagmi';
 export default function useAddress() {
   const account = useAccount();
   if (account.isConnected) {
-    return account.address.toLowerCase();
+    return account.address?.toLowerCase();
   }
 }
