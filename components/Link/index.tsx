@@ -9,7 +9,7 @@ const Link = ({ children, href }: Props) => {
   return (
     <a
       href={href}
-      className="text-base border-b-2 border-slate-300 hover:border-slate-500"
+      className="border-b-2 border-slate-300 hover:border-slate-500"
     >
       {children}
     </a>

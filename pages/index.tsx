@@ -1,11 +1,11 @@
 import * as React from "react";
 
 import Container from "../components/Container";
-import H1 from "../components/H1";
-// import Error from '../components/Error';
-// import Loading from '../components/Loading';
-// import RandomNFT from '../components/RandomNFT';
-// import Stats from '../components/Stats';
+import H2 from "../components/H2";
+import Error from "../components/Error";
+import Loading from "../components/Loading";
+import RandomNFT from "../components/RandomNFT";
+import Stats from "../components/Stats";
 import Text from "../components/Text";
 import { HomeT } from "../types";
 import { API_PATH } from "../utils";
@@ -16,29 +16,25 @@ type Props = {
 };
 
 const Home = ({ home, success }: Props) => {
-  // if (!success) {
-  //   return <Error message="Failed to fetch stats" />;
-  // }
+  if (!success) {
+    return <Error message="Failed to fetch stats" />;
+  }
 
-  // if (!home) {
-  //   return <Loading />;
-  // }
+  if (!home) {
+    return <Loading />;
+  }
 
   const { randomNFT, stats } = home;
 
   return (
     <Container>
-      <div className="flex flex-col justify-center items-center mb-24">
-        <H1>
-          <strong>Floor Report</strong>
-        </H1>
-        <Text>
+      <div className="flex flex-col justify-center items-center mb-2">
+        <H2>
           <em>NFT floor prices & analytics</em>
-        </Text>
+        </H2>
       </div>
-      {/*}
-    //   <Stats stats={stats} />
-    //   <RandomNFT nft={randomNFT} /> */}
+      <Stats stats={stats} />
+      <RandomNFT nft={randomNFT} />
     </Container>
   );
 };
