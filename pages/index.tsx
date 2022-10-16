@@ -6,7 +6,6 @@ import Error from "../components/Error";
 import Loading from "../components/Loading";
 import RandomNFT from "../components/RandomNFT";
 import Stats from "../components/Stats";
-import Text from "../components/Text";
 import { HomeT } from "../types";
 import { API_PATH } from "../utils";
 

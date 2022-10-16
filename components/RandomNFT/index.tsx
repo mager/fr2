@@ -1,8 +1,6 @@
 import * as React from "react";
 
 import { Routes } from "../../constants";
-import H5 from "../H5";
-import H6 from "../H6";
 import Link from "../Link";
 
 type Props = {
