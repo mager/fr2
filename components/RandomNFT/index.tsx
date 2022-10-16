@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { Routes } from "../../constants";
-import Container from "../Container";
 import H5 from "../H5";
+import H6 from "../H6";
 import Link from "../Link";
 
 type Props = {
@@ -23,15 +23,14 @@ const RandomNFT = ({ nft }: Props) => {
     nft;
   const displayName = `${collectionName} - ${name}`;
   return (
-    <div className="mb-12 text-center">
-      <img src={imageUrl} className="w-full" />
-      <H5>
+    <div className="mb-12 flex justify-center items-center flex-col">
+      <img src={imageUrl} className="w-full md:w-1/2" />
+      <h5 className="font-sans text-lg lg:text-xl tracking-tight mt-4">
         <Link href={Routes.COLLECTION(collectionSlug)}>{displayName}</Link>{" "}
-        <span className="block text-base">
-          owned by{" "}
-          <Link href={Routes.ADDRESS(owner)}>{ownerName || owner}</Link>
-        </span>
-      </H5>
+      </h5>
+      <h6 className="font-sans text-md lg:text-lg tracking-tight">
+        owned by <Link href={Routes.ADDRESS(owner)}>{ownerName || owner}</Link>
+      </h6>
     </div>
   );
 };
