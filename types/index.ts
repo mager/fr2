@@ -33,8 +33,7 @@ export type NFTT = {
 export type CollectionT = {
   name: string;
   slug: string;
-  floorETH: number;
-  floorUSD: number;
+  floor: number;
   value: number;
   thumb: string;
   updated: Date;

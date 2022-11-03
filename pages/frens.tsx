@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
+import { GetServerSideProps } from 'next'
 
 import Container from '../components/Container';
 import Error from '../components/Error';
@@ -52,7 +53,7 @@ const Frens = ({ frens, success }: Props) => {
     );
 };
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
     const url = `${API_PATH}/frens`;
     const res = await fetch(url);
     if (res.status !== 200) {

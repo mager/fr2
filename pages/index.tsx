@@ -1,4 +1,5 @@
 import * as React from "react";
+import { GetServerSideProps } from 'next'
 
 import Container from "../components/Container";
 import H2 from "../components/H2";
@@ -38,7 +39,7 @@ const Home = ({ home, success }: Props) => {
   );
 };
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
   const url = `${API_PATH}/home`;
   const res = await fetch(url);
   if (res.status !== 200) {
