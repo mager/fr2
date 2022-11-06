@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { Routes } from '../../constants';
 // import FloorPriceSmall from '../../components/FloorPriceSmall';
-// import NFT from '../../components/NFT';
+import NFT from '../../components/NFT';
 // import Quantity from '../../components/Quantity';
 import { CollectionT } from '../../types';
 
@@ -48,9 +48,9 @@ type Props = {
 
 const CollectionRow = ({ collection, i }: Props) => {
     return (
-        <div>
-            <div className="collapse" tabIndex={i}>
-                <div className="flex w-full collapse-title">
+        <div className="border-b-2 mb-2 pb-2">
+            <div tabIndex={i}>
+                <div className="flex w-full px-0 py-2">
                     {collection.thumb && (
                         <div className="relative">
                             <div className="avatar">
@@ -66,7 +66,7 @@ const CollectionRow = ({ collection, i }: Props) => {
                             )}
                         </div>
                     )}
-                    <div className="pl-2 flex w-full justify-between items-center">
+                    <div className="ml-1 flex w-full justify-between items-center">
                         <div>
                             <a href={Routes.COLLECTION(collection.slug)}>
                                 {collection.name} ({collection.floor}ETH)
@@ -77,7 +77,7 @@ const CollectionRow = ({ collection, i }: Props) => {
                         </div>
                     </div>
                 </div>
-                <div className="collapse-content">Foo</div>
+                <div>{collection.nfts.map((nft) => <NFT nft={nft} />)}</div>
             </div>
         </div>
     );

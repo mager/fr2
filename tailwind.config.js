@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         sans: ["Titillium Web", "sans-serif"],
         serif: ["Coustard", "serif"],
+        mono: ["Spline Sans Mono", "monospace"],
       },
       colors: {
         debug: "#f00",

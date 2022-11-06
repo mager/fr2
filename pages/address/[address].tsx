@@ -4,7 +4,7 @@ import { useAccount } from 'wagmi';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next'
 
-// import AddressMarquee from '../../components/AddressMarquee';
+import AddressMarquee from '../../components/AddressMarquee';
 import Container from '../../components/Container';
 // import EditProfile from '../../components/EditProfile';
 import H1 from '../../components/H1';
@@ -141,9 +141,9 @@ export const Address = ({ data }: Props): JSX.Element => {
           </div>
         </div>
       </div>
-      {/* <div>{hasCollections && <AddressMarquee data={data} />}</div> */}
+      <div>{hasCollections && <AddressMarquee data={data} />}</div>
       {data.collections ? (
-        <div>
+        <div className="mt-4">
           <div>
             <H4>Collections</H4>
           </div>
