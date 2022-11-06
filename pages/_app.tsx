@@ -6,8 +6,7 @@ import Footer from "../components/Footer";
 
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { chain, configureChains, createClient, defaultChains, WagmiConfig } from 'wagmi';
-// import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { configureChains, createClient, defaultChains, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 
 function MyApp({ Component, pageProps }: AppProps) {

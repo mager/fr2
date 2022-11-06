@@ -56,7 +56,7 @@ const Updating = () => {
 export const Address = ({ data }: Props): JSX.Element => {
   const { push } = useRouter();
   const account = useAccount();
-  const [isOpen, setIsOpen] = React.useState(false);
+  // const [isOpen, setIsOpen] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [isUpdating, setIsUpdating] = React.useState(false);
 
@@ -100,7 +100,7 @@ export const Address = ({ data }: Props): JSX.Element => {
   const imageSrc = getFrenPhoto(address);
 
   const hasCollections = data.collections;
-  const settings = user.settings;
+  // const settings = user.settings;
 
   return (
     <Container>
@@ -120,9 +120,9 @@ export const Address = ({ data }: Props): JSX.Element => {
             )}
             {usersWallet && (
               <div>
-                <a onClick={() => setIsOpen(true)}>
+                {/* <a onClick={() => setIsOpen(true)}>
                   Edit Profile
-                </a>
+                </a> */}
                 |
                 {loading ? (
                   <a>Refreshing...</a>
