@@ -4,7 +4,7 @@ import Container from "../Container";
 import Link from "../Link";
 
 const Footer = () => (
-  <footer>
+  <footer className="pb-12">
     <Container>
       <div className="flex justify-center">
         <div className="mx-2">

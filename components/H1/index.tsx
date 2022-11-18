@@ -6,7 +6,7 @@ type Props = {
 
 const H1 = ({ children }: Props) => {
   return (
-    <h1 className="font-serif font-bold text-4xl lg:text-5xl tracking-tight py-2">
+    <h1 className="font-serif font-bold text-4xl lg:text-5xl tracking-tight mb-2">
       {children}
     </h1>
   );

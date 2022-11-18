@@ -20,25 +20,6 @@ type Props = {
   data: GetAddressRespT;
 };
 
-// const InfoGrid = styled(div, ({ $theme }) => ({
-//   display: 'flex',
-//   justifyContent: 'space-between',
-// }));
-
-
-// const UserInfo = styled(div, () => ({
-//   display: 'flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-// }));
-
-// const Updated = styled(Text, ({ $theme }) => ({
-//   marginTop: $theme.sizing.scale200,
-//   fontSize: $theme.sizing.scale550,
-// }));
-
-// const Name = styled(div, ({ $theme }) => ({}));
-
 // const Edit = styled(div, ({ $theme }) => ({
 //   fontSize: $theme.sizing.scale550,
 //   marginTop: $theme.sizing.scale200,
@@ -104,7 +85,7 @@ export const Address = ({ data }: Props): JSX.Element => {
 
   return (
     <Container>
-      <div className="grid justify-between">
+      <div className="grid justify-between mb-4">
         <div className="flex justify-center items-center">
           {user.photo && (
             <div className="pr-2">
@@ -143,7 +124,7 @@ export const Address = ({ data }: Props): JSX.Element => {
       </div>
       <div>{hasCollections && <AddressMarquee data={data} />}</div>
       {data.collections ? (
-        <div className="mt-4">
+        <div className="mt-2">
           <div>
             <H4>Collections</H4>
           </div>
