@@ -1,10 +1,9 @@
-import * as React from 'react';
-import Marquee from 'react-fast-marquee';
+import * as React from "react";
+import Marquee from "react-fast-marquee";
 
-import { CollectionT } from '../../types';
+import { CollectionT } from "../../types";
 
-import FloorPriceSmall from '../../components/FloorPriceSmall';
-import Text from '../../components/Text';
+import FloorPriceSmall from "../../components/FloorPriceSmall";
 
 type Props = {
   collection: CollectionT;
@@ -28,11 +27,11 @@ const StatsMarquee = ({ collection }: Props) => {
   const components = [];
   // Create a map of keys and their corresponding labels
   const labels = {
-    '1d': '24 hour volume',
-    '7d': 'Weekly volume',
-    '30d': 'Monthly volume',
-    cap: 'Market cap',
-    sales: 'Total sales',
+    "1d": "24 hour volume",
+    "7d": "Weekly volume",
+    "30d": "Monthly volume",
+    cap: "Market cap",
+    sales: "Total sales",
   };
 
   // Loop through the keys in the labels map
@@ -42,11 +41,9 @@ const StatsMarquee = ({ collection }: Props) => {
       // Push a new component to the components array
       components.push(
         <div className="flex items-center justify-center px-2" key={key}>
-          <span className="italic mr-2">
-            {labels[key]}
-          </span>
+          <span className="italic mr-2">{labels[key]}</span>
           <FloorPriceSmall>{collection.collection[key]}</FloorPriceSmall>
-        </div>,
+        </div>
       );
     }
   }
@@ -60,7 +57,9 @@ const StatsMarquee = ({ collection }: Props) => {
       }}
     >
       <div className="w-full">
-        <div className="cursor-pointer flex items-center">{components.map((component) => component)}</div>
+        <div className="cursor-pointer flex items-center">
+          {components.map((component) => component)}
+        </div>
       </div>
     </Marquee>
   );
